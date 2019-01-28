@@ -5,6 +5,7 @@
 
 var webpack = require("webpack");
 var path = require("path");
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // 配置完mode，entry，output后就可以直接命令行输入webpack进行打包了
@@ -18,6 +19,11 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins:[
-       
+       new htmlWebpackPlugin({
+           //要被生成到内存的页面
+           template: "./src/index.html",
+           //生成到内存的页面的名字，默认访问路径http://localhost:8080/index.html，可以右键查看页面源码，发现使用的是内存中的bundle.js
+           filename: "index.html"
+       })
     ]
 }

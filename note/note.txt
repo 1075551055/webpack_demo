@@ -1,8 +1,18 @@
 1. npm i webpack -g --verbose; npm i webpack -D --verbose;
 2. npm i webpack-cli -g --verbose;
 3. npm i jquery -D --verbose;
+4. npm i webpack-cli -D --verbose; npm i webpack-dev-server -D --verbose;
+5. npm i html-webpack-plugin -D --verbose
+
 -----
 
 webpack src/main.js -o dist/bundle.js --mode development 新版本用法，比较严格，有警告也无法打包成功,请参考下面
 文章：https://blog.csdn.net/hqbootstrap1/article/details/81034435
+
+webpack-dev-server使用：
+webpack-dev-server的作用就是可以实时编译打包代码，无需刷新，类似nodemon
+1.先安装；
+2.package.json配置dev:webpack-dev-server;
+3.npm run dev, 默认会启动一个server服务http://localhost:8080，并在该目录下打包生成一个bundle.js，这个js是在内存中的，并没有
+  打包到dist目录（最终生产环境的code）下面. 使用webpack命令打包到dist
 
