@@ -7,6 +7,7 @@ var webpack = require("webpack");
 var path = require("path");
 
 module.exports = {
+    // 配置完mode，entry，output后就可以直接命令行输入webpack进行打包了
     // 设置development模式，webpack 4版本要求严格，必须指定当前是开发模式还是生产模式，有警告也无法打包 
     mode: "development",
     // 要打包的文件
